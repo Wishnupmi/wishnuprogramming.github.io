@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#2196f3">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'self' 'unsafe-inline' 'unsafe-eval' data: gap:">
+  <title>Framework7</title>
+  <link rel="stylesheet" href="css/framework7.bundle.min.css">
+  <link rel="stylesheet" href="css/app.css">
+
+   <!-- Bootstrap core CSS -->
+    <!-- <link href="../../css/editor.css" rel="stylesheet"> -->
+
+
+
+
+<!-- <link href="http://fonts.googleapis.com/css?family=Roboto:400,300,500,700" rel="stylesheet" type="text/css"> -->
+
+
+  <!-- Include Resource Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="./css/foundation.min.css"/>
+<!-- <link rel="stylesheet" type="text/css" href="./css/framework7.material.colors.min.css"/> -->
+    <!--
+      Include Resource Javascript
+
+      NOTE: These are for handling things outside of the scope of AmplitudeJS
+    -->
+    <script type="text/javascript" src="./js/jquery.js"></script>
+    <script type="text/javascript" src="./js/foundation.min.js"></script>
+
+    <!-- Include Amplitude JS -->
+    <script type="text/javascript" src="./js/amplitude.js"></script>
+
+    <!-- Include Style Sheet -->
+    <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+<style type="text/css">
+    
+
+.ios {
+   --f7-toolbar-height: 150px;
+  --f7-toolbar-font-size: 17px;
+  --f7-toolbar-inner-padding-left: 8px;
+  --f7-toolbar-inner-padding-right: 8px;
+
+
+
+}
+
+.ios .theme-dark,
+.ios.theme-dark {
+  --f7-tabbar-link-inactive-color: rgba(255, 255, 255, 0.54);
+}
+
+    </style>
+
+
+
+
+
+      
+  <link rel="apple-touch-icon" href="img/f7-icon-square.png">
+  <link rel="icon" href="img/f7-icon.png">
+
+  
+
+</head>
+<body>
+ <div id="app" class="framework7-root"><div class="panel-backdrop"></div>
+  <!-- Appbar -->
+
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <!-- <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Back</span>
+          </a>
+        </div> -->
+        <div class="title">Aplikasi Murojaah MP3</div>
+      </div>
+    </div>
+    <!-- <div class="toolbar toolbar-{{toolbarPosition}}">
+      <div class="toolbar-inner">
+        <a class="link">Spotify</a>
+        <a class="link">Right Link</a>
+      </div>
+    </div> -->
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="toolbar toolbar-bottom ios">
+    <div>
+
+
+
+
+
+      <div style="border-width: 0px;" id="amplitude-left">
+            <!-- <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true" /> -->
+            <div id="player-left-bottom">
+
+
+              <div id="time-container">
+                <span class="current-time">
+                  <span class="amplitude-current-minutes" amplitude-main-current-minutes="true"></span>:<span class="amplitude-current-seconds" amplitude-main-current-seconds="true"></span>
+                </span>
+                <input type="range" class="amplitude-song-slider" amplitude-main-song-slider="true" step=".1"/>
+                <span class="duration">
+                  <span class="amplitude-duration-minutes" amplitude-main-duration-minutes="true"></span>:<span class="amplitude-duration-seconds" amplitude-main-duration-seconds="true"></span>
+                </span>
+              </div>
+
+
+              <div id="control-container">
+                <div id="repeat-container">
+                  <div class="amplitude-repeat" id="repeat"></div>
+                </div>
+
+                <div id="central-control-container">
+                  <div id="central-controls">
+                    <div class="amplitude-prev" id="previous"></div>
+                    <div class="amplitude-play-pause" amplitude-main-play-pause="true" id="play-pause"></div>
+                    <div class="amplitude-next" id="next"></div>
+                  </div>
+                </div>
+
+                <div id="shuffle-container">
+                  <div class="amplitude-shuffle amplitude-shuffle-off" id="shuffle"></div>
+                </div>
+              </div>
+
+
+
+              <!-- <div id="meta-container">
+                <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name" style="font-size:16px;font-weight:bold;color:brown;"></span>
+
+                <div class="song-artist-album">
+                  <span amplitude-song-info="artist" amplitude-main-song-info="true"></span>
+                  <span amplitude-song-info="album" amplitude-main-song-info="true" style="font-size:12px;font-weight:bold;"></span>
+                </div>
+              </div> -->
+
+
+            </div>
+          </div>
+
+
+
+
+      <!-- <a class="link">Left Link</a>
+      <a class="link">Right Link</a> -->
+    </div>
+  </div>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="page-content">
+      
+      <div class="block-title">Pilihan Surat</div>
+      <div class="block">
+        <!-- <p>Toolbar supports both top and bottom positions. Click the following button to change its position.</p>
+        <p><a class="button button-fill" @click="toggleToolbarPosition">Toggle Toolbar Position</a></p> -->
+
+
+
+
+
+
+<div id="amplitude-right">
+            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="0">
+              <div class="song-now-playing-icon-container">
+                <div class="play-button-container">
+
+                </div>
+                <img class="now-playing" src="img/now-playing.svg"/>
+              </div>
+              <div class="song-meta-data">
+                <span class="song-title"><font color="brown"><b>1. Al-Fatihah</b></font></span>
+                <span class="song-artist"><small>Pembukaan</small></span>
+              </div>
+              <!-- <a href="https://switchstancerecordings.bandcamp.com/track/risin-high-feat-raashan-ahmad" class="bandcamp-link" target="_blank">
+                <img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+                <img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+              </a> -->
+              <span class="song-duration">00:50</span>
+            </div>
+
+
+            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="1">
+              <div class="song-now-playing-icon-container">
+                <div class="play-button-container">
+
+                </div>
+                <img class="now-playing" src="img/now-playing.svg"/>
+              </div>
+              <div class="song-meta-data">
+                <span class="song-title"><font color="brown"><b>2. Al-Baqarah</b></font></span>
+                <span class="song-artist"><small>Sapi Betina</small></span>
+              </div>
+              <!-- <a href="https://lorn.bandcamp.com/" class="bandcamp-link" target="_blank">
+                <img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+                <img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+              </a> -->
+              <span class="song-duration">10:27</span>
+            </div>
+
+
+
+
+            <div class="song amplitude-song-container amplitude-play-pause" amplitude-song-index="2">
+              <div class="song-now-playing-icon-container">
+                <div class="play-button-container">
+
+                </div>
+                <img class="now-playing" src="img/now-playing.svg"/>
+              </div>
+              <div class="song-meta-data">
+                <span class="song-title"><font color="brown"><b>3. Ali Imran</b></font></span>
+                <span class="song-artist"><small>Keluarga Imran</small></span>
+              </div>
+              <!-- <a href="https://lorn.bandcamp.com/" class="bandcamp-link" target="_blank">
+                <img class="bandcamp-grey" src="img/bandcamp-grey.svg"/>
+                <img class="bandcamp-white" src="img/bandcamp-white.svg"/>
+              </a> -->
+              <span class="song-duration">11:17</span>
+            </div>
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  return {
+    data() {
+      return {
+        toolbarPosition: 'bottom',
+      };
+    },
+    methods: {
+      toggleToolbarPosition: function () {
+        this.$setState({
+          toolbarPosition: this.toolbarPosition === 'top' ? 'bottom' : 'top',
+        });
+      },
+    }
+  }
+</script>
+
+<script src="js/framework7.bundle.min.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/app.js"></script>
+
+  
+ <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="../../js/vendor/popper.min.js"></script>
+    <script src="../../js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/holderjs@2.9.4/holder.js"></script> -->
+
+
+
+<script type="text/javascript">
+    Amplitude.init({
+      "songs": [
+        {
+          "name": "1. Alfatihah",
+          "artist": "Syaikh Misyari Rasyid",
+          "album": "(Pembukaan)",
+          "url": "https://docs.google.com/uc?authuser=0&id=1YEP8JOl4Lw91xz8cXmwFv7j_8Y_npFO_",
+          "cover_art_url": "./album-art/surat.jpg"
+        },
+        {
+          "name": "2. Al-Baqarah",
+          "artist": "Syaikh Misyari Rasyid",
+          "album": "Sapi Betina",
+          "url": "https://docs.google.com/uc?authuser=0&id=1mt0_cjrmr7LlTsTeumEb_Y45Ft2xICrK",
+          "cover_art_url": "./album-art/surat.jpg"
+        },
+        {
+          "name": "3. Ali Imran",
+          "artist": "Syaikh Misyari Rasyid",
+          "album": "Keluarga Imran",
+          "url": "https://docs.google.com/uc?authuser=0&id=1n36gECU3PxUPOLs_0fC7nALNxY0UodR_",
+          "cover_art_url": "./album-art/surat.jpg"
+        }
+      ]
+    });
+
+  </script>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
