@@ -1,5 +1,5 @@
 # wishnuprogramming.github.io
-web application audio mp3
+Application mobile audio mp3
 
 #Demo Application : 
 https://wishnupmi.github.io/wishnuprogramming.github.io/
