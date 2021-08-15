@@ -35,23 +35,44 @@
 
     <!-- Include Style Sheet -->
     <link rel="stylesheet" type="text/css" href="./css/styles.css"/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 <style type="text/css">
     
 
 .ios {
    --f7-toolbar-height: 150px;
-  --f7-toolbar-font-size: 17px;
-  --f7-toolbar-inner-padding-left: 8px;
-  --f7-toolbar-inner-padding-right: 8px;
+   --f7-toolbar-font-size: 17px;
+   --f7-toolbar-inner-padding-left: 8px;
+   --f7-toolbar-inner-padding-right: 8px;
 
-
-
+   
+   
+   
 }
 
-.ios .theme-dark,
-.ios.theme-dark {
-  --f7-tabbar-link-inactive-color: rgba(255, 255, 255, 0.54);
+.text-color-lightblue {
+	font-family: 'Poppins', sans-serif;
+	color: #5ac8fa;
 }
+.text-color-red {
+  font-family: 'Poppins', sans-serif;	
+  color: #ff3b30;
+}
+
+.text-color-green {
+	font-family: 'Poppins', sans-serif;
+	color: #4cd964;
+	font-size: 16px;
+}
+
+
+
+
 
     </style>
 
@@ -66,7 +87,7 @@
   
 
 </head>
-<body>
+<body class="theme-dark">
  <div id="app" class="framework7-root"><div class="panel-backdrop"></div>
   <!-- Appbar -->
 
@@ -80,7 +101,7 @@
             <span class="if-not-md">Back</span>
           </a>
         </div> -->
-        <div class="title">Aplikasi Murojaah MP3</div>
+        <div class="title text-color-lightblue">Aplikasi Murojaah MP3</div>
       </div>
     </div>
     <!-- <div class="toolbar toolbar-{{toolbarPosition}}">
@@ -120,7 +141,7 @@
 
       <div style="border-width: 0px;" id="amplitude-left">
             <!-- <img amplitude-song-info="cover_art_url" amplitude-main-song-info="true" /> -->
-            <div id="player-left-bottom">
+            <div id="player-left-bottom" style="background-color: #000000;border-color:rgba(255, 255, 255, 0.16);">
 
 
               <div id="time-container">
@@ -152,8 +173,6 @@
                 </div>
               </div>
 
-
-
               <!-- <div id="meta-container">
                 <span amplitude-song-info="name" amplitude-main-song-info="true" class="song-name" style="font-size:16px;font-weight:bold;color:brown;"></span>
 
@@ -162,7 +181,6 @@
                   <span amplitude-song-info="album" amplitude-main-song-info="true" style="font-size:12px;font-weight:bold;"></span>
                 </div>
               </div> -->
-
 
             </div>
           </div>
@@ -195,7 +213,7 @@
 
     <div class="page-content">
       
-      <div class="block-title">Pilihan Surat</div>
+      <div class="block-title text-color-green">Pilihan Surat</div>
       <div class="block">
         <!-- <p>Toolbar supports both top and bottom positions. Click the following button to change its position.</p>
         <p><a class="button button-fill" @click="toggleToolbarPosition">Toggle Toolbar Position</a></p> -->
@@ -214,7 +232,7 @@
                 <img class="now-playing" src="img/now-playing.svg"/>
               </div>
               <div class="song-meta-data">
-                <span class="song-title"><font color="brown"><b>1. Al-Fatihah</b></font></span>
+                <span class="song-title text-color-red">1. Al-Fatihah</span>
                 <span class="song-artist"><small>Pembukaan</small></span>
               </div>
               <!-- <a href="https://switchstancerecordings.bandcamp.com/track/risin-high-feat-raashan-ahmad" class="bandcamp-link" target="_blank">
@@ -233,7 +251,7 @@
                 <img class="now-playing" src="img/now-playing.svg"/>
               </div>
               <div class="song-meta-data">
-                <span class="song-title"><font color="brown"><b>2. Al-Baqarah</b></font></span>
+                <span class="song-title text-color-red">2. Al-Baqarah</span>
                 <span class="song-artist"><small>Sapi Betina</small></span>
               </div>
               <!-- <a href="https://lorn.bandcamp.com/" class="bandcamp-link" target="_blank">
@@ -254,7 +272,7 @@
                 <img class="now-playing" src="img/now-playing.svg"/>
               </div>
               <div class="song-meta-data">
-                <span class="song-title"><font color="brown"><b>3. Ali Imran</b></font></span>
+                <span class="song-title text-color-red">3. Ali Imran</span>
                 <span class="song-artist"><small>Keluarga Imran</small></span>
               </div>
               <!-- <a href="https://lorn.bandcamp.com/" class="bandcamp-link" target="_blank">
