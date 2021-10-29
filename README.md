@@ -1,3 +1,5 @@
+![alt text](https://github.com/Wishnupmi/store/blob/main/Master_detail.png)
+
 # wishnuprogramming.github.io
 Application mobile audio mp3
 
