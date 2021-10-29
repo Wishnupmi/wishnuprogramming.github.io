@@ -1,4 +1,4 @@
-![alt text](https://github.com/Wishnupmi/store/blob/main/Master_detail.png)
+![alt text](https://github.com/Wishnupmi/wishnuprogramming.github.io/blob/main/murojaah.jpg)
 
 # wishnuprogramming.github.io
 Application mobile audio mp3
